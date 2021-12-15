@@ -78,6 +78,12 @@ public class UserService {
                 if (user.getName() != null) {
                     userOptional.get().setName(user.getName());
                 }
+                if (user.getBirthtDay() != null) {
+                    userOptional.get().setBirthtDay(user.getBirthtDay());
+                }
+                if (user.getMonthBirthtDay() != null) {
+                    userOptional.get().setMonthBirthtDay(user.getMonthBirthtDay());
+                }
                 if (user.getAddress() != null) {
                     userOptional.get().setAddress(user.getAddress());
                 }
@@ -128,18 +134,6 @@ public class UserService {
 
     public List<User> birthtDayList(String monthBirthtDay) {
         return repositorio.birthtDayList(monthBirthtDay);
-    }
-
-    public List<User> listAll() {
-        return null;
-    }
-
-    public boolean emailExists(String email) {
-        return false;
-    }
-
-    public User autenticateUser(String email, String password) {
-        return null;
     }
 
 }
